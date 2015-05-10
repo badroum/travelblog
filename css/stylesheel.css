@@ -1,0 +1,539 @@
+/*======== Remise a z�ro des polices ============*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
+html,body { margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset,img {border:0;}
+input{ border:1px solid #b0b0b0; padding:0px; color:#979797; width:190px; }
+address,caption,cite,code,dfn,th,var {
+font-style:normal;
+font-weight:normal;
+}
+ol,ul {
+list-style:none;
+}
+caption,th {
+text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {all_menu
+font-size:100%;
+font-weight:normal;
+}
+q:before,q:after {
+content:'';
+}
+abbr,acronym { border:0;
+}
+body {
+       cursor : wait;
+}
+
+/*================= Navigations ===================*/
+/*menu*/
+nav ul
+{
+	padding-left: 10px;
+	list-style-type: none;
+
+}
+
+nav li
+{
+	margin-right: 15px
+}
+
+nav a
+{
+	text-decoration: none;
+	padding:0px;
+	font-size: 1.3em;
+	color: #000;
+}
+
+/*banni�re*/
+nav .banniere p
+{
+	margin-top:15px;
+}
+nav .banniere
+{
+	display: inline-block;
+	position: fixed;
+	width:300px;
+	height:50px;
+	margin: 0px;
+	color: rgba(255,255,255,0);
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	left: -225px;
+	z-index:10;
+	opacity: 0;
+	box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.5);
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
+}
+nav  a:active div,
+nav a:hover div,
+nav a:focus div
+{
+	color: rgba(255,255,255,1);
+	left: 0px;
+	opacity: 1;
+}
+
+#banniere_compte	{	background-color: rgb(0,137,197);	}
+#banniere_recherche	{	background-color: rgb(77,184,89);	}
+#banniere_test		{	background-color: rgb(246,137,58);	}
+#banniere_contact	{	background-color: rgb(239,59,97);	}
+
+nav span
+{
+	background-color: black;
+	width:50px;
+	height:50px;
+	display: inline-block;
+}
+
+nav .sous_menus
+{
+
+	display: inline-block;
+	position: relative;
+	left:-100px;
+	top:0px;
+	width:195px;
+	margin: 0px;
+	background-color: #0089c5;
+	display: inline-block;
+	z-index:-5;
+	opacity: 0;
+	-webkit-transform: scale(0.1) rotateX(-190deg) rotateY(-30deg);/* Agrandissement de la photo � l'�chelle 1.4 et rotation de -10 degr�s */
+    -moz-transform: scale(0.1) rotateX(-190deg) rotateY(-30deg);
+    -o-transform: scale(0.1) rotateX(-190deg) rotateY(-30deg);
+    transform: scale(0.1) rotateX(-190deg) rotateY(-30deg);
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+nav .all_menu:hover .sous_menus,
+nav .all_menu:active .sous_menus,
+nav .all_menu:focus .sous_menus
+{
+	left:75px;
+	top:50px;
+	opacity: 0.2;
+	-webkit-transform: scale(1);/* Agrandissement de la photo � l'�chelle 1.4 et rotation de -10 degr�s */
+    -moz-transform: scale(1);
+    -o-transform: scale(1) ;
+    transform: scale(1) );
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+
+}
+
+.all_menu
+{
+	width:50px;
+	height:50px;
+	text-align:center;
+	margin:0 0 8px 0;
+	/*radial-gradient*/
+	background:-webkit-gradient(radial,left top,left bottom,from(transparent),to(rgba(0,0,0,.8))),#555;
+	background:-webkit-radial-gradient(rgba(0, 0, 0, 0.16),rgba(0, 0, 0, 1));
+	background:   -moz-radial-gradient(rgba(0, 0, 0, 0.16),rgba(0, 0, 0, 1));
+	background:    -ms-radial-gradient(rgba(0, 0, 0, 0.16),rgba(0, 0, 0, 1));
+	background:     -o-radial-gradient(rgba(0, 0, 0, 0.16),rgba(0, 0, 0, 1));
+	background:        radial-gradient(rgba(0, 0, 0, 0.16),rgba(0, 0, 0, 1));
+	border-radius: 25px;
+	-webkit-box-shadow: inset 0px 0px 5px #1B1E22 ;
+		 -moz-box-shadow: inset 0px 0px 5px #1b1e22;
+		   -o-box-shadow: inset 0px 0px 5px #1b1e22;
+				  box-shadow: inset 0px 0px 5px #1B1E22;
+
+}
+.all_menu:hover,
+.active .all_menu
+{
+	background:-webkit-gradient(radial,left top,left bottom,from(transparent),to(rgba(0,0,0,.2))),#555;
+	background:-webkit-radial-gradient(transparent,rgba(0,0,0,.2)),#555;
+	background:   -moz-radial-gradient(transparent,rgba(0,0,0,.2)),#555;
+	background:    -ms-radial-gradient(transparent,rgba(0,0,0,.2)),#555;
+	background:     -o-radial-gradient(transparent,rgba(0,0,0,.2)),#555;
+	background:        radial-gradient(transparent,rgba(0,0,0,.2)),#555;
+
+	border-radius: 25px;
+	-webkit-box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.2);
+	-o-box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.2);
+	box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+#medium		{	background-color: #f6893a;		}/*orange*/
+#none	{	background-color: #0089c5;		}/*bleu*/
+#clear	{	background-color: #4db859;		}/*vert*/
+#busy2			{	background-color: #FE1B00;		}/*rouge*/
+
+#medium:hover	,.active #medium	{		box-shadow:  0px 0px 10px #f6893a;}/*orange*/
+#none:hover,.active #none	{		box-shadow:  0px 0px 10px #0089c5;}/*bleu*/
+#clear:hover,.active #clear	{		box-shadow:  0px 0px 10px #4db859;}/*vert*/
+#busy2:hover,.active #busy2			{		box-shadow:  0px 0px 10px #FE1B00;}/*rouge*/
+
+/*================= Admin ===================*/
+
+.box
+{
+	position:  absolute;
+	left: 0;
+	top: 0; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+	width: 50px;
+	height: 50px;
+	background: rgba(255,255,255,0.66);
+	border: 2px  solid rgba(0,0,0,0.5);
+	border-radius: 4px; padding: 8px;
+	text-align: center;
+}
+.box .all_menu
+{
+	margin:0 0 8 0;
+	text-align: center;
+}
+.plan_SOC
+{
+	height: 500px;
+  width: 800px;
+}
+.name_input_box
+{
+	border: 1px solid #b0b0b0;
+	margin-left: -15px;
+padding: 0px;
+color: #979797;
+width: 80px;
+}
+
+/*================= Form ===================*/
+/** The div_form that will contain our two forms **/
+#div_form{
+  width: 60%;
+  right: 0px;
+  min-height: 560px;
+  margin: 0px auto;
+  width: 500px;
+  position: relative;
+}
+/**** Styling the form elements **/
+
+/**** general text styling ****/
+#div_form a{
+  color: rgb(95, 155, 198);
+  text-decoration: underline;
+}
+
+#div_form h1{
+  font-size: 48px;
+  color: rgb(6, 106, 117);
+  padding: 2px 0 10px 0;
+  font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+/** For the moment only webkit supports the background-clip:text; */
+#div_form h1{
+    background: -webkit-repeating-linear-gradient(-45deg,
+  rgb(18, 83, 93) ,
+  rgb(18, 83, 93) 20px,
+  rgb(64, 111, 118) 20px,
+  rgb(64, 111, 118) 40px,
+  rgb(18, 83, 93) 40px);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+#div_form h1:after{
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: -moz-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(147,184,189,0.8) 20%, rgba(147,184,189,1) 53%, rgba(147,184,189,0.8) 79%, rgba(147,184,189,0) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(147,184,189,0)), color-stop(20%,rgba(147,184,189,0.8)), color-stop(53%,rgba(147,184,189,1)), color-stop(79%,rgba(147,184,189,0.8)), color-stop(100%,rgba(147,184,189,0)));
+  background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+  background: -o-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+  background: -ms-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+  background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+}
+
+#div_form p{
+  margin-bottom:15px;
+}
+#div_form p:first-child{
+  margin: 0px;
+}
+#div_form label,
+.accordeon ul li .titre{
+  color: rgb(64, 92, 96);
+  position: relative;
+}
+
+/**** advanced input styling ****/
+/* placeholder */
+::-webkit-input-placeholder  {
+  color: rgb(190, 188, 188);
+  font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{
+  color: rgb(190, 188, 188);
+  font-style: italic;
+}
+input {
+  outline: none;
+}
+
+/* all the input except submit and checkbox */
+#div_form input:not([type="checkbox"]),
+#div_form select,
+.info span{
+  width: 92%;
+  margin-top: 4px;
+  padding: 10px 5px 10px 32px;
+  border: 1px solid rgb(178, 178, 178);
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+    -moz-box-sizing : content-box;
+         box-sizing : content-box;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+     -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+          box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  -webkit-transition: all 0.2s linear;
+     -moz-transition: all 0.2s linear;
+       -o-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+}
+#div_form input:not([type="checkbox"]):active,
+#div_form input:not([type="checkbox"]):focus,
+#div_form select:active,
+#div_form select:focus{
+  border: 1px solid rgba(91, 90, 90, 0.7);
+  background: rgba(238, 236, 240, 0.2);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+     -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+          box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+}
+
+/** the magic icon trick ! **/
+[data-icon]:after {
+    content: attr(data-icon);
+    font-family: 'FontomasCustomRegular';
+    color: rgb(106, 159, 171);
+    position: absolute;
+    left: 10px;
+    top: 35px;
+  width: 30px;
+}
+
+/*styling both submit buttons */
+#div_form p.button input{
+  width: 30%;
+  cursor: pointer;
+  background: rgb(61, 157, 179);
+  padding: 8px 5px;
+  font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+  color: #fff;
+  font-size: 24px;
+  border: 1px solid rgb(28, 108, 122);
+  margin-bottom: 10px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+          0px 0px 0px 3px rgb(254, 254, 254),
+          0px 5px 3px 3px rgb(210, 210, 210);
+     -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+          0px 0px 0px 3px rgb(254, 254, 254),
+          0px 5px 3px 3px rgb(210, 210, 210);
+          box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+          0px 0px 0px 3px rgb(254, 254, 254),
+          0px 5px 3px 3px rgb(210, 210, 210);
+  -webkit-transition: all 0.2s linear;
+     -moz-transition: all 0.2s linear;
+       -o-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+}
+#div_form p.button input:hover{
+  background: rgb(74, 179, 198);
+}
+#div_form p.button input:active,
+#div_form p.button input:focus{
+  background: rgb(40, 137, 154);
+  position: relative;
+  top: 1px;
+  border: 1px solid rgb(12, 76, 87);
+  -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+     -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+}
+p.login.button,
+p.signin.button{
+  text-align: right;
+  margin: 5px 0;
+}
+
+
+/*styling the links to change from one form to another */
+
+p.change_link{
+	position: absolute;
+	color: rgb(127, 124, 124);
+	left: 0px;
+	height: 20px;
+	width: 440px;
+	padding: 17px 30px 20px 30px;
+	font-size: 16px	;
+	text-align: right;
+	border-top: 1px solid rgb(219, 229, 232);
+	-webkit-border-radius: 0 0  5px 5px;
+	   -moz-border-radius: 0 0  5px 5px;
+	        border-radius: 0 0  5px 5px;
+	background: rgb(225, 234, 235);
+	background: -moz-repeating-linear-gradient(-45deg,
+	rgb(247, 247, 247) ,
+	rgb(247, 247, 247) 15px,
+	rgb(225, 234, 235) 15px,
+	rgb(225, 234, 235) 30px,
+	rgb(247, 247, 247) 30px
+	);
+	background: -webkit-repeating-linear-gradient(-45deg,
+	rgb(247, 247, 247) ,
+	rgb(247, 247, 247) 15px,
+	rgb(225, 234, 235) 15px,
+	rgb(225, 234, 235) 30px,
+	rgb(247, 247, 247) 30px
+	);
+	background: -o-repeating-linear-gradient(-45deg,
+	rgb(247, 247, 247) ,
+	rgb(247, 247, 247) 15px,
+	rgb(225, 234, 235) 15px,
+	rgb(225, 234, 235) 30px,
+	rgb(247, 247, 247) 30px
+	);
+	background: repeating-linear-gradient(-45deg,
+	rgb(247, 247, 247) ,
+	rgb(247, 247, 247) 15px,
+	rgb(225, 234, 235) 15px,
+	rgb(225, 234, 235) 30px,
+	rgb(247, 247, 247) 30px
+	);
+}
+#div_form p.change_link a {
+	display: inline-block;
+	font-weight: bold;
+	background: rgb(247, 248, 241);
+	padding: 2px 6px;
+	color: rgb(29, 162, 193);
+	margin-left: 10px;
+	text-decoration: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid rgb(203, 213, 214);
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s  linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s  linear;
+	transition: all 0.4s  linear;
+}
+#div_form p.change_link a:hover {
+	color: rgb(57, 191, 215);
+	background: rgb(247, 247, 247);
+	border: 1px solid rgb(74, 179, 198);
+}
+#div_form p.change_link a:active{
+	position: relative;
+	top: 1px;
+}
+
+.info{
+position:relative;
+z-index:24;
+color:#000;
+text-decoration:none
+}
+
+.info:hover{
+z-index:25;
+background-color:#FFF
+}
+
+.info span{
+display: none
+}
+
+.info:hover span{
+display:block;
+position:absolute;
+top:2em; left:2em; width:15em;
+border:1px solid #000;
+background-color:#FFF;
+color:#000;
+text-align: justify;
+font-weight:none;
+padding:5px;
+}
+
+/*================= Bandeau Beta ===================*/
+#label-container {
+	position: absolute;
+}
+
+#label {
+	padding: 10px 10px;
+	height: auto;
+	width: 160px;
+	text-align: center;
+	font-size: 0.8em;
+	color: #f7f5f3;
+	text-shadow: -2px 1px 0px #6b1010;
+
+	position: relative;
+	top: 15px;
+	left: -50px;
+	z-index: 89;
+
+	-webkit-transform: rotate(-40deg);
+	-moz-transform: rotate(-40deg);
+	transform: rotate(-40deg);
+	-o-transform: rotate(-40deg);
+
+	background: #dc3a3a;
+	background: -moz-linear-gradient(top,  #dc3a3a,  #b31b1b);
+	background: -webkit-gradient(linear, left top, left bottom, from(#dc3a3a), to(#b31b1b));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#dc3a3a', EndColorStr='#b31b1b', GradientType=0);
+
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+
+	border-top: 1px solid #dc3a3a;
+	border-bottom: 1px solid #b31b1b;
+}
+
+#label p {
+	line-height: 1.4;
+}
